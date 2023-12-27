@@ -1,1 +1,10 @@
-node_modules
+.vscode/
+node_modules/
+build/
+temp/
+.env
+dist
+
+uploads/*
+!uploads/.gitkeep
+.DS_Store
