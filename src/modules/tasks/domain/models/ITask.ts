@@ -1,8 +1,8 @@
 export interface ITask {
-  id: number;
+  id: string;
   title: string;
   description: string;
   done: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  created_at: Date;
+  updated_at: Date;
 }

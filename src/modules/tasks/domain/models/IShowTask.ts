@@ -1,3 +1,3 @@
 export interface IShowTask {
-  id: number;
+  id: string;
 }

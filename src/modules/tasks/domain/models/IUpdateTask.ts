@@ -1,5 +1,5 @@
 export interface IUpdateTask {
-  id: number;
+  id: string;
   title: string;
   description: string;
   done: boolean;

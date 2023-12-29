@@ -11,7 +11,7 @@ type SearchParams = {
 
 export interface ITasksRepository {
   findByTitle(title: string): Promise<ITask | null>;
-  findById(id: number): Promise<ITask | null>;
+  findById(id: string): Promise<ITask | null>;
   findAll({ page, skip, take }: SearchParams): Promise<ITaskPaginate>;
   findAllByIds(tasks: IFindTasks[]): Promise<ITask[]>;
   create(data: ICreateTask): Promise<ITask>;

@@ -1,3 +1,3 @@
 export interface IDeleteTask {
-  id: number;
+  id: string;
 }

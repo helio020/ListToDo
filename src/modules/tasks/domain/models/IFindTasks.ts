@@ -1,3 +1,3 @@
 export interface IFindTasks {
-  id: number;
+  id: string;
 }
