@@ -1,6 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 import { ITasksRepository } from '../domain/repositories/ITasksRepository';
 import { ITaskPaginate } from '../domain/models/ITaskPaginate';
+import TasksRepository from '../infra/typeorm/repositories/TasksRepository';
 
 interface SearchParams {
   page: number;
@@ -10,7 +11,7 @@ interface SearchParams {
 @injectable()
 class ListTaskService {
   constructor(
-    @inject('TaskRepository')
+    @inject(TasksRepository)
     private taskRepository: ITasksRepository,
   ) {}
 

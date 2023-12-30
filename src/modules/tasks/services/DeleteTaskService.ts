@@ -2,11 +2,12 @@ import { inject, injectable } from 'tsyringe';
 import { ITasksRepository } from '../domain/repositories/ITasksRepository';
 import { IDeleteTask } from '../domain/models/IDeleteTask';
 import AppError from '@shared/errors/AppError';
+import TasksRepository from '../infra/typeorm/repositories/TasksRepository';
 
 @injectable()
 class DeleteTaskService {
   constructor(
-    @inject('TasksRepository')
+    @inject(TasksRepository)
     private tasksRepository: ITasksRepository,
   ) {}
 

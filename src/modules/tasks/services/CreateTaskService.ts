@@ -3,11 +3,12 @@ import { ITasksRepository } from '../domain/repositories/ITasksRepository';
 import { ITask } from '../domain/models/ITask';
 import { ICreateTask } from '../domain/models/ICreateTask';
 import AppError from '@shared/errors/AppError';
+import TasksRepository from '../infra/typeorm/repositories/TasksRepository';
 
 @injectable()
 class CreateTaskService {
   constructor(
-    @inject('TasksRepository')
+    @inject(TasksRepository)
     private tasksRepository: ITasksRepository,
   ) {}
 
