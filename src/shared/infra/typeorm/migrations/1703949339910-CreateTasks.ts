@@ -24,6 +24,7 @@ export class CreateTasks1703949339910 implements MigrationInterface {
           {
             name: 'done',
             type: 'boolean',
+            default: false,
           },
           {
             name: 'created_at',
